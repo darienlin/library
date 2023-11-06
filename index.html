@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" defer>
+    <script src="scripts.js" defer></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="titleContainer">
+            <li>Library</li>
+            <li><button class="title" onclick="openForm()">Add a Book</button></li>
+        </ul>
+    </div>
+
+    <div class="body">
+        <div class="indexContainer">
+            <div class="index">Title</div>
+            <div class="index">Author</div>
+            <div class="index">Pages</div>
+            <div class="index">Read?</div>
+        </div>
+        <ul class="bookContainer" id="contentBody">
+        </ul>
+    </div>
+
+    <div id="formcontainer">
+        <form class="form close" id="bookForm">
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="title" required/>
+
+            <label for="author">Author: </label>
+            <input type="text" id="author" required>
+
+            <label for="pages">Pages: </label>
+            <input type="number" name="pages" id="pages" required>
+
+            <label for="read">Did you read?</label>
+            <input type="checkbox" name="read" id="read" required>
+
+            <button type='submit' class="btn" id='submitBtn'>Submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+</body>
+
+</html>
